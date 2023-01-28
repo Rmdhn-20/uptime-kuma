@@ -19,7 +19,7 @@ USER node
 RUN git config --global user.email "no-reply@no-reply.com"
 RUN git config --global user.name "PR Tester"
 RUN git clone https://github.com/louislam/uptime-kuma.git .
-RUN npm ci
+RUN npm run setup
 
 EXPOSE 3000 3001
 VOLUME ["/app/data"]
